@@ -3,60 +3,110 @@
 }
 
 html {
-  --primary-color: #fa5d0f;
-  --secondary-color: #ffce27;
-  --tertiary-color: #d13405;
-  --code-header-color: #a8a8a8;
-  --code-background-color: #f8f8f8;
-  --grey: #eee;
-  --dark-grey: #444;
-  --app-section-even-color: #fff;
-  --app-section-odd-color: var(--grey);
-  --border-radius: 5px;
-  --content-width: 600px;
-  --text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  font-size: 18px;
-  line-height: 2rem;
-  color: rgba(0, 0, 0, 0.8);
+  --color-1: #1e90ff;
+  --color-2: #9b59b6;
+  --color-primary-surface: #2c2f33;
+  --color-primary-text: #e0e6ed;
+  --color-primary-text-muted: #999;
+  --color-primary-text-dark: #666;
+  --color-secondary-surface: #3a3f47;
+  --color-secondary-surface-active: #494f58;
+  --color-secondary-bold: #4b4f57;
+  --color-secondary-text: #ffffff;
+  --color-secondary-text-muted: #acacac;
+  --color-tertiary-surface: #161726;
+  --color-tertiary-text: #ffffff;
+  --color-accent: #ff6f61;
+  --color-error: #ff6b6b;
+  --color-danger: #ff4444;
+  --color-warning: #ffb347;
+  --color-success: rgb(56, 173, 56);
+  --color-grey-transparent: rgba(200, 200, 200, 0.3);
+
+  --size-3x: 60px;
+  --size-4x: 100px;
+  --size-5x: 150px;
+  --size-6x: 200px;
+  --size-7x: 250px;
+  --size-8x: 300px;
+
+  --size-xxl: 48px;
+  --size-xl: 32px;
+  --size-large: 20px;
+  --size-medium: 12px;
+  --size-small: 8px;
+  --size-tiny: 4px;
+  --size-nano: 2px;
+  --radius-medium: 6px;
+  --radius-medium: 12px;
+  --radius-large: 20px;
+  --font-large: 22px;
+  --font-medium: 18px;
+  --font-small: 14px;
+  --font-tiny: 12px;
+  --line-height: 1.6;
+  --border-active: 2px solid var(--color-1);
+  --shadow-normal: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-active: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --inverse-hover: 0 6px 20px rgba(255, 255, 255, 0.3);
+  --time-normal: 350ms;
+  --transition-all: all var(--time-normal) ease-in-out;
+  --transition-shadow: box-shadow var(--time-normal) ease-in-out;
+  --font-family: "Inter", sans-serif;
+  --content-width: 1280px;
+  --transform-hover: translateY(-2px);
+
+  --color-2-light: color-mix(in oklab, var(--color-2) 70%, white 20%);
+
+  --code-header-color: var(--color-secondary-bold);
+  --code-background-color: var(--color-secondary-surface-active);
+  --content-width: 900px;
+  font-size: var(--font-medium);
+  line-height: 1.75rem;
+  color: var(--color-primary-text);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--color-primary-surface);
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-primary-surface);
 }
 
 h1 {
-  font-size: 4rem;
+  margin: 0;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 500;
-  color: var(--tertiary-color);
-  text-shadow: var(--text-shadow);
+  color: var(--color-2);
+  text-align: center;
 }
 
 h2 {
-  font-size: 2.5rem;
+  margin: 1.5rem 0 0 0;
+  font-size: 2rem;
   line-height: 1;
   font-weight: 400;
-  color: var(--primary-color);
-  text-shadow: var(--text-shadow);
+  color: var(--color-1);
 }
 
 h3 {
+  margin: 1.25rem 0 0 0;
   font-size: 1.75rem;
   line-height: 1;
   font-weight: 300;
   letter-spacing: 2px;
-  color: var(--tertiary-color);
-  text-shadow: var(--text-shadow);
+  color: var(--tertiary-2);
 }
 
 h4 {
   /* Careful. This is meant to be used as code block headers */
   color: var(--code-header-color);
-  margin-bottom: 0;
+  margin: 1rem 0 0 0;
   background-color: var(--code-background-color);
   padding: 0.5em;
   border-bottom: 1px solid var(--code-header-color);
@@ -67,8 +117,7 @@ h5 {
   font-size: 1.5rem;
   line-height: 1;
   font-weight: 300;
-  color: var(--tertiary-color);
-  text-shadow: var(--text-shadow);
+  color: var(--tertiary-2);
 }
 
 h6 {
@@ -76,12 +125,23 @@ h6 {
   line-height: 1;
   font-weight: 300;
   letter-spacing: 2px;
-  color: var(--dark-grey);
-  text-shadow: var(--text-shadow);
+  color: var(--color-secondary-text-muted);
 }
 
 p {
   font-size: 1rem;
+}
+
+a {
+  color: var(--color-secondary-text);
+  text-decoration: none;
+  transition: var(--transition-all);
+  border-bottom: 1px solid var(--color-secondary-text);
+}
+
+a:hover {
+  color: var(--color-1);
+  border-bottom: 1px solid var(--color-1);
 }
 
 main p {
@@ -90,11 +150,11 @@ main p {
 
 section {
   padding: 1rem;
-  background: var(--app-section-even-color);
+  background: var(--color-primary-surface);
 }
 
 section:nth-of-type(even) {
-  background: var(--app-section-odd-color);
+  background: var(--color-primary-surface);
 }
 
 section > *, footer > *, header > *, nav > * {
@@ -105,7 +165,7 @@ section > *, footer > *, header > *, nav > * {
 
 p code, ul code, li code {
   padding: 3px;
-  color: #333;
+  color: var(--color-secondary-text);
   background-color: var(--code-background-color);
   border-radius: 5px;
 }
@@ -115,58 +175,17 @@ pre {
 }
 
 header {
-  padding: 1rem;
-  border-top: 3px solid var(--primary-color);
-  background-color: var(--secondary-color);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, var(--color-1), var(--color-2)) 1;
+  background-color: var(--color-tertiary-surface);
+  box-shadow: 0 10px 20px var(--color-tertiary-surface), 0 6px 6px var(--color-tertiary-surface);
 }
 
 footer {
   padding: 1rem;
-  background: var(--secondary-color);
-}
-
-nav {
-  background: var(--secondary-color);
-}
-
-nav > div {
-  display: flex;
-  width: 100%;
-}
-
-nav a {
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--tertiary-color);
-}
-
-nav a:hover {
-  color: var(--primary-color);
-  border-bottom: 3px dashed var(--primary-color);
-}
-
-nav a.active {
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--primary-color);
+  background: var(--color-secondary-surface);
 }
 
 img {
   max-width: 100%;
-}
-
-ul.breadcrumb {
-  padding: 0;
-  list-style: none;
-}
-
-ul.breadcrumb li {
-  display: inline;
-}
-
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  content: "/\00a0";
 }

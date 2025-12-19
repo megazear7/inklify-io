@@ -1,12 +1,14 @@
 ## Getting Started
 
-### Make changes
+To setup Inklify to start using it to write books, run these commands and then open [localhost:3000](http://localhost:3000).
 
-1. Make changes under /src based upon the [OrisonJS documentation](https://orison.alexlockhart.me)
-1. Build the changes to /docs with `npm run build`
-1. Test your changes by running `npm run serve` and going to localhost:3000
+```sh
+git clone https://github.com/megazear7/torlify.git
+cd torlify
+nvm use 22
+npm install
+npm run init
+npm start
+```
 
-### Deploy
-
-1. Push the changes to a Github repo.
-1. Setup that Github repo to use Github Pages for hosting.
+Open [localhost:3000](http://localhost:3000)

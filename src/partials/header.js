@@ -1,7 +1,7 @@
 import { html } from 'orison';
 
-export default () => html`
+export default (title) => html`
   <header>
-    <h1>OrisonJS Starter Kit</h1>
+    <h1><img src="/logo/logo-text.png" alt="${title}"></h1>
   </header>
 `;

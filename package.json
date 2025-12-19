@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "orison build",
-    "serve": "orison serve",
+    "serve": "orison serve --port 3001",
     "prod": "NODE_ENV=production orison serve",
     "static": "orison static"
   },
