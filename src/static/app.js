@@ -66,4 +66,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  const firstTime = window.localStorage.getItem('firstTimeVisitor') === null;
+  const videoContainer = document.querySelector('.video-container');
+  const video = document.querySelector('.video');
+  const goToDocsLink = document.querySelector('.go-to-docs');
+
+  if (firstTime) {
+    window.localStorage.setItem('firstTimeVisitor', 'no');
+    video.width = window.innerWidth;
+    video.height = window.innerHeight;
+    videoContainer.classList.add('full-screen');
+    goToDocsLink.style.display = 'block';
+    goToDocsLink.addEventListener('click', () => {
+      goToDocsLink.style.display = 'none';
+      videoContainer.classList.remove('full-screen');
+      video.removeAttribute('height');
+      video.width = "900";
+      video.height = "550";
+    });
+  } else {
+    video.width = "900";
+    video.height = "550";
+  }
 });

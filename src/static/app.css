@@ -91,7 +91,7 @@ h1 {
 }
 
 h2 {
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0 1rem 0;
   font-size: 2rem;
   line-height: 1;
   font-weight: 400;
@@ -153,7 +153,6 @@ main p {
 }
 
 section {
-  padding: 1rem;
   background: var(--color-primary-surface);
 }
 
@@ -186,6 +185,7 @@ header {
   border-image: linear-gradient(to right, var(--color-1), var(--color-2)) 1;
   background-color: var(--color-tertiary-surface);
   box-shadow: 0 10px 20px var(--color-tertiary-surface), 0 6px 6px var(--color-tertiary-surface);
+  margin: 0 0 2.5rem
 }
 
 footer {
@@ -219,4 +219,39 @@ footer a:hover {
 
 img {
   max-width: 100%;
+}
+
+.video-container.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #161725;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.go-to-docs {
+  color: var(--color-secondary-text);
+  background-color: var(--color-1);
+  border-radius: var(--radius-large);
+  padding: var(--size-medium);
+  display: none;
+  position: absolute;
+  bottom: 65px;
+  right: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.go-to-docs:hover {
+  color: var(--color-secondary-text);
+  background-color: var(--color-2);
+  box-shadow: var(--shadow-hover);
+  border: none;
 }
