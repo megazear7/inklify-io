@@ -25,11 +25,11 @@ export default context => html`
     <meta name="apple-mobile-web-app-title" content="${context.root.data.title}">
 
     <!-- Homescreen icons -->
-    <link rel="apple-touch-icon" href="/logo/icon-256x256.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="/logo/icon-512x512.png">
+    <link rel="apple-touch-icon" href="/logo/logo-256x256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/logo/logo-512x512.png">
 
     <!-- Tile icon for Windows 8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="/logo/icon-512x512.png">
+    <meta name="msapplication-TileImage" content="/logo/logo-512x512.png">
     <meta name="msapplication-TileColor" content="${context.root.data.primaryColor}">
     <meta name="msapplication-tap-highlight" content="no">
 
@@ -40,7 +40,7 @@ export default context => html`
     <meta property="og:title" content="${context.root.data.shortTitle}">
     <meta property="og:site_name" content="${context.root.data.shortTitle}">
     <meta property="og:description" content="${context.root.data.description}">
-    <meta property="og:image" content="/logo/icon-512x512.png" />
+    <meta property="og:image" content="/logo/logo-512x512.png" />
   </head>
   <body>
     ${header(context.root.data.shortTitle)}
