@@ -255,3 +255,13 @@ img {
   box-shadow: var(--shadow-hover);
   border: none;
 }
+
+.getting-started {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.getting-started h2 {
+  display: inline-block;
+}

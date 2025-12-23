@@ -1,6 +1,4 @@
-## Getting Started
-
-To setup Inklify to start using it to write books, run these commands and then open [localhost:3000](http://localhost:3000)
+Write books in mere minutes with Inklify. To get started, run these commands and then open [localhost:3000](http://localhost:3000)
 
 ```sh
 git clone https://github.com/megazear7/inklify.git
@@ -11,4 +9,4 @@ npm run init
 npm start
 ```
 
-Open [localhost:3000](http://localhost:3000) and [contribute on GitHub](https://github.com/megazear7/inklify)
+Watch the video below to learn more and consider [contributing on GitHub](https://github.com/megazear7/inklify)

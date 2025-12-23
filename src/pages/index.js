@@ -1,10 +1,15 @@
 import { html } from 'orison';
 
 export default context => html`
-  <section>${context.mdFile('./src/partials/getting-started.md')}</section>
+  <section>
+    <div class="getting-started">
+      <h2>Getting Started</h2>
+      <img src="/logo/logo-64x64.png" />
+    </div>
+    ${context.mdFile('./src/partials/getting-started.md')}
+  </section>
   <section>
     <div>
-      <h2>Watch to Learn More!</h2>
       <div class="video-container">
 
         <video 
